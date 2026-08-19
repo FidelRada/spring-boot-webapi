@@ -48,21 +48,21 @@ jobs:
 
     # Publicar JAR
     - name: Publish JAR
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: webapi-artifact
         path: target/*.jar
 
     # Publicar Reporte de Pruebas
     - name: Publish Test Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-report-artifact
         path: target/surefire-reports/
 
     # Publicar Reporte de Cobertura
     - name: Publish Code Coverage Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: code-coverage-report-artifact
         path: target/site/jacoco/
